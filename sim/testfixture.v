@@ -1,8 +1,8 @@
 `timescale 1ns/10ps
-`define CYCLE    100           	        // Modify your clock period here
+`define CYCLE    20          	        // Modify your clock period here
 
 
-`define SDFFILE  "./lcd_ctrl_syn.sdf"	// Modify your sdf file name
+`define SDFFILE  "../syn/lcd_ctrl_syn.sdf"	// Modify your sdf file name
 
 `ifdef tb1
   `define EXPECT "./tb1_goal.dat"

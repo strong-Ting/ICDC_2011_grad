@@ -3,7 +3,8 @@
 // Do not modify this file
 //
 testfixture.v
-../src/lcd_ctrl.v
-+define+tb2
-+notimingcheck
+../syn/lcd_ctrl_syn.v
+-v
+../../tsmc13_neg.v
++define+tb2+SDF
 +access+r

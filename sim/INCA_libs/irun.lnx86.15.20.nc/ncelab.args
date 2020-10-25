@@ -2,11 +2,9 @@
 // File created by:  ncverilog
 // Do not modify this file
 //
-+define+tb2
-+notimingcheck
++define+tb2+SDF
 +access+r
 -noshowtop
--NOTIMINGCHECKS
 -ACCESS
 +r
 -MESSAGES

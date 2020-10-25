@@ -77,6 +77,7 @@ begin
 	   	else ns = WRITE;	
 	end
 	DONE: ns = DONE;
+	default: ns = IDLE;
 	endcase
 end
 
@@ -87,12 +88,8 @@ begin
 	else
 	begin
 		if( (cs == READ && ns == READ) || cs == WRITE) {pos_Y,pos_X} <= {pos_Y,pos_X} + 6'd1;
-		else if(cs == IDLE && ns == WRITE) {pos_Y,pos_X} <= 6'd0;
-		else if(cs == READ && IROM_A == 6'd63) 
-		begin
-			pos_X <= 6'd4;
-			pos_Y <= 6'd4;
-		end
+		else if(cs == IDLE && cmd_valid == 1'd1 && cmd == 3'd0) {pos_Y,pos_X} <= 6'd0;
+		else if(cs == READ && IROM_A == 6'd63) {pos_Y,pos_X} <= {3'd4,3'd4};
 		else 
 		begin
 			case(cs)
@@ -108,17 +105,45 @@ end
 //output
 
 //IROM_EN
-wire IROM_EN = (cs == READ || cs_reg == READ) ? 1'd0 : 1'd1;
+//wire IROM_EN = (cs == READ || cs_reg == READ) ? 1'd0 : 1'd1;
+reg IROM_EN;
+always@(posedge clk or posedge reset)
+begin
+	if(reset) IROM_EN <= 1'd0;
+	else if(cs == READ || ns == READ) IROM_EN <= 1'd0;
+	else IROM_EN <= 1'd1;
+end
 
 //busy
-wire busy = (cs == DONE || cs == IDLE) ? 1'd0 : 1'd1;
+//wire busy = (cs == DONE || cs == IDLE) ? 1'd0 : 1'd1;
+reg busy;
+always@(posedge clk or posedge reset)
+begin
+	if(reset) busy <= 1'd1;
+	else if(ns == IDLE || ns == DONE) busy <= 1'd0;
+	else busy <= 1'd1;
+end
 
 //IRB_RW
-wire IRB_RW = (cs == WRITE || cs == DONE) ? 1'd0 : 1'd1;
+//wire IRB_RW = (cs == WRITE || cs == DONE) ? 1'd0 : 1'd1;
+
+reg IRB_RW;
+always@(posedge clk or posedge reset)
+begin
+	if(reset) IRB_RW <= 1'd1;
+	else if(cmd_valid == 1'd1 && cmd == 3'd0) IRB_RW <= 1'd0;
+end
 
 //done
 wire done = (cs == DONE) ? 1'd1 : 1'd0;
-
+/*
+reg done;
+always@(posedge clk or posedge reset)
+begin
+	if(reset) done <= 1'd0;
+	else if(cs == DONE) done <= 1'd1;
+end
+*/
 //IROM_A
 wire [5:0] IROM_A = {pos_Y,pos_X};
 
@@ -138,7 +163,7 @@ wire [5:0] index_2 = {pos_Y,pos_X-3'd1};
 wire [5:0] index_3 = {pos_Y,pos_X};
 
 //sum
-wire [9:0] sum = Image[index_0] + Image[index_1] + Image[index_2] + Image[index_3];
+wire [9:0] sum = (Image[index_0] + Image[index_1]) + (Image[index_2] + Image[index_3]);
 
 //Image
 integer i;
@@ -151,7 +176,6 @@ begin
 			Image[i] <= 8'd0;
 		end
 	end
-	else if(cs == RST) Image[6'd0] <= IROM_Q;
 	else if(cs == READ) Image[IROM_A-6'd1] <= IROM_Q;
 	else if(cs_reg == READ) Image[6'h3f] <= IROM_Q;
 	else if(cs == MIRROR_X) 

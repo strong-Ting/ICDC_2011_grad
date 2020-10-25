@@ -1,40 +1,650 @@
 ncverilog: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
-TOOL:	ncverilog	15.20-s039: Started on Oct 25, 2020 at 22:59:36 CST
+TOOL:	ncverilog	15.20-s039: Started on Oct 26, 2020 at 00:36:25 CST
 ncverilog
 	testfixture.v
-	../src/lcd_ctrl.v
-	+define+tb2
-	+notimingcheck
+	../syn/lcd_ctrl_syn.v
+	-v
+	../../tsmc13_neg.v
+	+define+tb2+SDF
 	+access+r
-Recompiling... reason: file '../src/lcd_ctrl.v' is newer than expected.
-	expected: Sun Oct 25 22:59:08 2020
-	actual:   Sun Oct 25 22:59:34 2020
-file: ../src/lcd_ctrl.v
+file: testfixture.v
+	module worklib.IRB:v
+		errors: 0, warnings: 0
+	module worklib.IROM:v
+		errors: 0, warnings: 0
+	module worklib.irom:v
+		errors: 0, warnings: 0
+	module worklib.test:v
+		errors: 0, warnings: 0
+file: ../syn/lcd_ctrl_syn.v
 	module worklib.LCD_CTRL:v
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
+		Caching library 'tsmc13_neg' ....... Done
 	Elaborating the design hierarchy:
-	Building instance overlay tables: .................... Done
+  DFFSX1 \cs_reg[3]_inst  ( .D(n2876), .CK(clk), .SN(n2888), .Q(cs[3]) );
+                        |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,811|24): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18583): QN
+
+  DFFRX1 \Image_reg[1][7]  ( .D(n2847), .CK(clk), .RN(n8820), .Q(\Image[1][7] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,817|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[1][6]  ( .D(n2846), .CK(clk), .RN(n8816), .Q(\Image[1][6] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,818|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[1][5]  ( .D(n2845), .CK(clk), .RN(n2925), .Q(\Image[1][5] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,819|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[1][4]  ( .D(n2844), .CK(clk), .RN(n8815), .Q(\Image[1][4] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,820|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[1][3]  ( .D(n2843), .CK(clk), .RN(n8816), .Q(\Image[1][3] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,821|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[1][2]  ( .D(n2842), .CK(clk), .RN(n2886), .Q(\Image[1][2] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,822|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[1][1]  ( .D(n2841), .CK(clk), .RN(n2897), .Q(\Image[1][1] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,823|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[5][7]  ( .D(n2815), .CK(clk), .RN(n8820), .Q(\Image[5][7] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,825|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[5][6]  ( .D(n2814), .CK(clk), .RN(n8816), .Q(\Image[5][6] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,826|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[5][5]  ( .D(n2813), .CK(clk), .RN(n2888), .Q(\Image[5][5] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,827|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[5][4]  ( .D(n2812), .CK(clk), .RN(n8820), .Q(\Image[5][4] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,828|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[5][3]  ( .D(n2811), .CK(clk), .RN(n8816), .Q(\Image[5][3] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,829|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[5][2]  ( .D(n2810), .CK(clk), .RN(n2925), .Q(\Image[5][2] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,830|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[5][1]  ( .D(n2809), .CK(clk), .RN(n2897), .Q(\Image[5][1] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,831|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[5][0]  ( .D(n2808), .CK(clk), .RN(n8817), .Q(\Image[5][0] ) );
+                         |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,832|25): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[16][7]  ( .D(n2727), .CK(clk), .RN(n2887), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,845|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[16][6]  ( .D(n2726), .CK(clk), .RN(n8816), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,847|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[16][5]  ( .D(n2725), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,849|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[16][4]  ( .D(n2724), .CK(clk), .RN(n8816), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,851|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[16][3]  ( .D(n2723), .CK(clk), .RN(n8816), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,853|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[16][2]  ( .D(n2722), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,855|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[16][1]  ( .D(n2721), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,857|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[18][7]  ( .D(n2711), .CK(clk), .RN(n2887), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,861|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[18][6]  ( .D(n2710), .CK(clk), .RN(n8820), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,863|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[18][5]  ( .D(n2709), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,865|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[18][4]  ( .D(n2708), .CK(clk), .RN(n8816), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,867|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[18][3]  ( .D(n2707), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,869|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[18][2]  ( .D(n2706), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,871|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[18][1]  ( .D(n2705), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,873|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[19][7]  ( .D(n2703), .CK(clk), .RN(n8814), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,875|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[19][6]  ( .D(n2702), .CK(clk), .RN(n8815), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,877|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[19][5]  ( .D(n2701), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,879|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[19][2]  ( .D(n2698), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,885|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[19][1]  ( .D(n2697), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,887|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[19][0]  ( .D(n2696), .CK(clk), .RN(n2887), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,889|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[23][7]  ( .D(n2671), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,891|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[23][6]  ( .D(n2670), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,893|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[23][5]  ( .D(n2669), .CK(clk), .RN(n8817), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,895|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[23][4]  ( .D(n2668), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,897|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[23][3]  ( .D(n2667), .CK(clk), .RN(n8817), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,899|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[23][2]  ( .D(n2666), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,901|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[23][1]  ( .D(n2665), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,903|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[26][7]  ( .D(n2647), .CK(clk), .RN(n8820), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,913|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[26][6]  ( .D(n2646), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,915|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[26][5]  ( .D(n2645), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,917|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[26][4]  ( .D(n2644), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,919|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[26][3]  ( .D(n2643), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,921|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[26][2]  ( .D(n2642), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,923|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[27][7]  ( .D(n2639), .CK(clk), .RN(n8814), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,927|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[27][6]  ( .D(n2638), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,929|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[27][5]  ( .D(n2637), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,931|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[27][4]  ( .D(n2636), .CK(clk), .RN(n8816), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,933|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[27][3]  ( .D(n2635), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,935|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[27][2]  ( .D(n2634), .CK(clk), .RN(n8816), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,937|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[27][1]  ( .D(n2633), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,939|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[27][0]  ( .D(n2632), .CK(clk), .RN(n2887), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,941|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[33][7]  ( .D(n2591), .CK(clk), .RN(n2887), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,959|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[33][6]  ( .D(n2590), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,961|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[33][5]  ( .D(n2589), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,963|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[33][4]  ( .D(n2588), .CK(clk), .RN(n8814), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,965|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[33][3]  ( .D(n2587), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,967|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[33][2]  ( .D(n2586), .CK(clk), .RN(n2887), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,969|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[33][1]  ( .D(n2585), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,971|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[37][7]  ( .D(n2559), .CK(clk), .RN(n8820), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,975|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[37][6]  ( .D(n2558), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,977|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[37][5]  ( .D(n2557), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,979|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[37][4]  ( .D(n2556), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,981|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[37][3]  ( .D(n2555), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,983|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[37][2]  ( .D(n2554), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,985|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[37][1]  ( .D(n2553), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,987|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[37][0]  ( .D(n2552), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,989|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[48][7]  ( .D(n2471), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1015|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[48][6]  ( .D(n2470), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1017|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[48][5]  ( .D(n2469), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1019|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[48][4]  ( .D(n2468), .CK(clk), .RN(n8814), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1021|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[48][3]  ( .D(n2467), .CK(clk), .RN(n8817), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1023|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[48][2]  ( .D(n2466), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1025|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[48][1]  ( .D(n2465), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1027|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[50][7]  ( .D(n2455), .CK(clk), .RN(n2887), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1033|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[50][6]  ( .D(n2454), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1035|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[50][5]  ( .D(n2453), .CK(clk), .RN(n8820), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1037|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[50][4]  ( .D(n2452), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1039|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[50][3]  ( .D(n2451), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1041|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[50][2]  ( .D(n2450), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1043|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[50][1]  ( .D(n2449), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1045|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[51][7]  ( .D(n2447), .CK(clk), .RN(n8820), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1047|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[51][6]  ( .D(n2446), .CK(clk), .RN(n8816), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1049|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[51][5]  ( .D(n2445), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1051|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[51][2]  ( .D(n2442), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1057|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[51][1]  ( .D(n2441), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1059|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[51][0]  ( .D(n2440), .CK(clk), .RN(n2925), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1061|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[55][7]  ( .D(n2415), .CK(clk), .RN(n8820), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1063|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[55][6]  ( .D(n2414), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1065|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[55][5]  ( .D(n2413), .CK(clk), .RN(n8820), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1067|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[55][4]  ( .D(n2412), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1069|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[55][3]  ( .D(n2411), .CK(clk), .RN(n8816), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1071|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[55][2]  ( .D(n2410), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1073|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[55][1]  ( .D(n2409), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1075|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[58][7]  ( .D(n2391), .CK(clk), .RN(n2887), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1079|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[58][6]  ( .D(n2390), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1081|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[58][5]  ( .D(n2389), .CK(clk), .RN(n8820), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1083|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[58][4]  ( .D(n2388), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1085|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[58][3]  ( .D(n2387), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1087|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[58][2]  ( .D(n2386), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1089|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[58][1]  ( .D(n2385), .CK(clk), .RN(n2886), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1091|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[59][7]  ( .D(n2383), .CK(clk), .RN(n8820), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1093|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[59][6]  ( .D(n2382), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1095|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[59][5]  ( .D(n2381), .CK(clk), .RN(n8815), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1097|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[59][4]  ( .D(n2380), .CK(clk), .RN(n2897), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1099|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[59][3]  ( .D(n2379), .CK(clk), .RN(n8816), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1101|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[59][2]  ( .D(n2378), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1103|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[59][1]  ( .D(n2377), .CK(clk), .RN(n2888), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1105|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFRX1 \Image_reg[59][0]  ( .D(n2376), .CK(clk), .RN(n8815), .Q(
+                          |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1107|26): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): QN
+
+  DFFSX1 busy_reg ( .D(n2873), .CK(clk), .SN(n2888), .QN(n8806) );
+                |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1119|16): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18583): Q
+
+  DFFRX1 IROM_EN_reg ( .D(n2872), .CK(clk), .RN(n8816), .QN(n2941) );
+                   |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,1807|19): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,18307): Q
+
+  CMPR42X1 U8962 ( .A(\DP_OP_1222J1_122_9848/n127 ), .B(
+               |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,9455|15): 2 output ports were not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,17473): CO
+ncelab: (/home/lin/github/tsmc13_neg.v,17473): ICO
+
+  DFFX1 \cs_reg_reg[2]  ( .D(cs[2]), .CK(clk), .Q(cs_reg[2]) );
+                      |
+ncelab: *W,CUVWSP (../syn/lcd_ctrl_syn.v,9458|22): 1 output port was not connected:
+ncelab: (/home/lin/github/tsmc13_neg.v,17873): QN
+
+	Building instance overlay tables: ....................
+	$readmemb(`IMAGE, mem );
+	                    |
+ncelab: *W,MEMODR (./IROM.v,153|21): $readmem default memory order incompatible with IEEE1364.
+ Done
 	Generating native compiled code:
-		worklib.LCD_CTRL:v <0x35eef1e9>
-			streams:  36, words: 21827
+		worklib.IRB:v <0x7d467f4c>
+			streams:  16, words:  7768
+		worklib.IROM:v <0x58514de7>
+			streams:   1, words:   235
+		worklib.irom:v <0x5ce2a0e2>
+			streams:  13, words:  4778
+		worklib.test:v <0x43cdd13e>
+			streams:   9, words:  9190
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
-		                  Instances  Unique
-		Modules:                  5       5
-		Primitives:              42       1
-		Timing outputs:          16       1
-		Registers:              100     100
-		Scalar wires:            30       -
-		Expanded wires:          37       5
-		Vectored wires:           7       -
-		Always blocks:           12      12
-		Initial blocks:           7       7
-		Cont. assignments:        8      17
-		Pseudo assignments:       1       1
-		Timing checks:          102       -
-		Simulation timescale:  10ps
+		                     Instances  Unique
+		Modules:                  6621     120
+		UDPs:                      537       1
+		Primitives:              14108       8
+		Timing outputs:           7182     107
+		Registers:                 629     100
+		Scalar wires:             7730       -
+		Expanded wires:             26       4
+		Always blocks:               6       6
+		Initial blocks:              7       7
+		Cont. assignments:           4       6
+		Pseudo assignments:          1       1
+		Timing checks:            4923     582
+		Delayed tcheck signals:   1607     548
+		Simulation timescale:      1ps
 	Writing initial simulation snapshot: worklib.test:v
 Loading snapshot worklib.test:v .................... Done
 *Verdi* Loading libsscore_ius152.so
@@ -53,7 +663,7 @@ All data have been generated successfully!
 
 -------------------PASS-------------------
 
-Simulation complete via $finish(1) at time 22060 NS + 0
+Simulation complete via $finish(1) at time 4424 NS + 0
 ./testfixture.v:137 		    #10 $finish;
 ncsim> exit
-TOOL:	ncverilog	15.20-s039: Exiting on Oct 25, 2020 at 22:59:41 CST  (total: 00:00:05)
+TOOL:	ncverilog	15.20-s039: Exiting on Oct 26, 2020 at 00:36:31 CST  (total: 00:00:06)

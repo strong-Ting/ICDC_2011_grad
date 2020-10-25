@@ -1,5 +1,5 @@
 # operating conditions and boundary conditions #
-set cycle  10          
+set cycle  8          
 
 ### === Set Clocks Timing Contrants === ###
 create_clock -name CLK -period $cycle [get_ports  clk]
