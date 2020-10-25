@@ -70,7 +70,7 @@ initial begin
 
 $fsdbDumpfile("LCD_CTRL.fsdb");
 $fsdbDumpvars;
-
+$fsdbDumpMDA;
 end
 
 

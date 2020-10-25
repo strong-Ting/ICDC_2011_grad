@@ -1,0 +1,9 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+testfixture.v
+../src/lcd_ctrl.v
++define+tb2
++notimingcheck
++access+r

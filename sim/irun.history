@@ -1,0 +1,14 @@
+s1(25Oct2020:21:44:30):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 
+s2(25Oct2020:21:45:29):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 +access+r 
+s3(25Oct2020:21:47:16):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 +access+r 
+s4(25Oct2020:21:47:40):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 +access+r 
+s5(25Oct2020:21:53:55):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 +access+r 
+s6(25Oct2020:21:59:07):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 +access+r 
+s7(25Oct2020:22:02:08):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 +access+r 
+s8(25Oct2020:22:11:54):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 +access+r 
+s9(25Oct2020:22:13:05):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 +access+r 
+s10(25Oct2020:22:15:24):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 +access+r 
+s11(25Oct2020:22:20:11):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 +access+r 
+s12(25Oct2020:22:22:10):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 +access+r 
+s13(25Oct2020:22:22:49):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1 +access+r 
+s14(25Oct2020:22:23:51):  irun testfixture.v ../src/lcd_ctrl.v +define+tb1+notimingchecks +access+r 
