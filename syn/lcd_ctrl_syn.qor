@@ -3,7 +3,7 @@
 Report : qor
 Design : LCD_CTRL
 Version: Q-2019.12
-Date   : Mon Oct 26 00:34:41 2020
+Date   : Thu Jun 17 14:20:51 2021
 ****************************************
 
 
@@ -59,16 +59,16 @@ Date   : Mon Oct 26 00:34:41 2020
   -----------------------------------
 
 
-  Hostname: DESKTOP-OFJ877F
+  Hostname: icsdws20.ee.yuntech.edu.tw
 
   Compile CPU Statistics
   -----------------------------------------
   Resource Sharing:                    0.00
-  Logic Optimization:                  0.27
-  Mapping Optimization:                7.22
+  Logic Optimization:                  0.21
+  Mapping Optimization:                4.99
   -----------------------------------------
-  Overall Compile Time:               20.40
-  Overall Compile Wall Clock Time:    11.59
+  Overall Compile Time:               14.48
+  Overall Compile Wall Clock Time:     8.01
 
   --------------------------------------------------------------------
 

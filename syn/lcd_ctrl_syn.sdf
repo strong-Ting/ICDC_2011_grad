@@ -1,7 +1,7 @@
 (DELAYFILE
 (SDFVERSION "OVI 2.1")
 (DESIGN "LCD_CTRL")
-(DATE "Mon Oct 26 00:34:40 2020")
+(DATE "Thu Jun 17 14:20:51 2021")
 (VENDOR "slow")
 (PROGRAM "Synopsys Design Compiler cmos")
 (VERSION "Q-2019.12")

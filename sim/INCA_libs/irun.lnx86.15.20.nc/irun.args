@@ -1,8 +1,0 @@
-//
-// File created by:  irun
-// Do not modify this file
-//
-testfixture.v
-../src/lcd_ctrl.v
-+define+tb1+notimingchecks
-+access+r
